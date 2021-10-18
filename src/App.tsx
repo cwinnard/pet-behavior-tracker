@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import BottomMenu from './BottomMenu';
+import Home from './views/Home';
 import Profile from './views/Profile';
 
 const App = () => {
@@ -11,6 +12,9 @@ const App = () => {
           <Link to="/">Link 1</Link>
           <Link to="/profile">Profile</Link>
         </div>
+        <Route path="/" exact={true}>
+          <Home />
+        </Route>
         <Route path="/profile">
           <Profile />
         </Route>
