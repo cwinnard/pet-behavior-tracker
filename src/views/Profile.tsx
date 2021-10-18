@@ -1,5 +1,5 @@
 import user from '../data/user.json';
-import dogs from '../data/dogs.json'
+import dogs from '../data/dogs.json';
 
 const Profile = () => {
     return (
