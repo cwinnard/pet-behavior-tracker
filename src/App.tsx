@@ -1,6 +1,4 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import BottomMenu from './BottomMenu';
 
@@ -11,7 +9,6 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <div>
           Hello {user.name}
         </div>
@@ -26,6 +23,12 @@ const App = () => {
           ))}
         </div>
       </header>
+      <BrowserRouter>
+        <div>
+          <Link to="/">Link 1</Link>
+          <Link to="/dog">Link 2</Link>
+        </div>
+      </BrowserRouter>
       <BottomMenu />
     </div>
   );
