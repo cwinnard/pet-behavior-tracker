@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Hank",
+        "birthdate": "11/23/2019",
+        "observations": [
+            {
+                "timestamp": 1634586092,
+                "category": "behavior",
+                "observation": "happy"
+            }
+        ]
+    },
+    {
+        "name": "Skeeter",
+        "birthdate": "01/01/2016"
+    }
+]
