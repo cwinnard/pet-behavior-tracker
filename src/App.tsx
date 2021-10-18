@@ -1,3 +1,4 @@
+import { createTheme , ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import BottomMenu from './BottomMenu';
@@ -5,21 +6,36 @@ import Home from './views/Home';
 import PetOverview from './views/PetOverview';
 import Profile from './views/Profile';
 
+import './styles/main.css';
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1A535C'
+    },
+    secondary: {
+      main: '#ff6b6b'
+    }
+  }
+});
+
 const App = () => {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <div>
+        <div className="app-main">
           <Link to="/">Link 1</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/dog/1">Overview</Link>
+
+          <Route path="/" exact={true} component={Home} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/dog/:id" component={PetOverview} />
         </div>
-        <Route path="/" exact={true} component={Home} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/dog/:id" component={PetOverview} />
       </BrowserRouter>
       <BottomMenu />
-    </div>
+    </ThemeProvider>
   );
 }
 
