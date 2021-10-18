@@ -1,17 +1,56 @@
 [
     {
+        "id": "1",
         "name": "Hank",
         "birthdate": "11/23/2019",
         "observations": [
             {
                 "timestamp": 1634586092,
-                "category": "behavior",
-                "observation": "happy"
+                "category": "Behavior",
+                "observation": "Happy"
+            },
+            {
+                "timestamp": 1634586092,
+                "category": "Behavior",
+                "observation": "Happy"
+            },
+            {
+                "timestamp": 1634586092,
+                "category": "Behavior",
+                "observation": "Spastic"
+            },
+            {
+                "timestamp": 1634586092,
+                "category": "Behavior",
+                "observation": "Timid"
             }
         ]
     },
     {
+        "id": "2",
         "name": "Skeeter",
-        "birthdate": "01/01/2016"
+        "birthdate": "01/01/2016",
+        "observations": [
+            {
+                "timestamp": 1634586092,
+                "category": "Behavior",
+                "observation": "Aggressive"
+            },
+            {
+                "timestamp": 1634586092,
+                "category": "Behavior",
+                "observation": "Timid"
+            },
+            {
+                "timestamp": 1634586092,
+                "category": "Behavior",
+                "observation": "Happy"
+            },
+            {
+                "timestamp": 1634586092,
+                "category": "Behavior",
+                "observation": "Timid"
+            }
+        ]
     }
 ]

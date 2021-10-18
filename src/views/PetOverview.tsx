@@ -5,14 +5,15 @@ import dogs from '../data/dogs.json';
 
 const PetOverview = () => {
   // TSTODO
-    const { id } = useParams() as any;
-    return (
+  const { id } = useParams() as any;
+  const dog = dogs.find(dog => dog.id === id) as any;
+  return (
+    <div>
       <div>
-        <div>
-          Hello {dogs[0].name} id {id}
-        </div>
+        Hello {dog.name} id {id}
       </div>
-    );
-  }
+    </div>
+  );
+}
   
   export default PetOverview;
