@@ -1,4 +1,5 @@
-import { Card } from '@mui/material';
+import { Card, CardActionArea } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 import user from '../data/user.json';
 import sortedObservations from '../data/sortedObservations.json';
@@ -14,8 +15,12 @@ const Home = () => {
           {sortedObservations.map((observation) => {
               return (
                   <Card className="observation-card">
-                      <img className="pet-avatar" src={observation.picture} />
-                      Hello observation
+                      <Link to={`/dog/${observation.id}`} style={{ textDecoration: 'none' }}>
+                        <div className="pet-info">
+                            <img className="pet-avatar" src={observation.picture} />
+                            {observation.name}
+                        </div>
+                      </Link>
                   </Card>
               )
           })}
