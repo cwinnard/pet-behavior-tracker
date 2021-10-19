@@ -1,4 +1,14 @@
+.app-background {
+    background-color: #f7fff7;
+    display: flex;
+    align-content: center;
+}
+
+.app-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
 .app-main {
     height: 100vh;
-    background-color: #f7fff7;
 }

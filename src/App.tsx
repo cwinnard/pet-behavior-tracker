@@ -12,10 +12,10 @@ import './styles/main.css';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1A535C'
+      main: '#390099'
     },
     secondary: {
-      main: '#ff6b6b'
+      main: '#ff5400'
     }
   }
 });
@@ -23,18 +23,22 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <div className="app-main">
-          <Link to="/">Link 1</Link>
-          <Link to="/profile">Profile</Link>
-          <Link to="/dog/1">Overview</Link>
+      <div className="app-background">
+        <div className="app-container">
+          <BrowserRouter>
+            <div className="app-main">
+              <Link to="/">Link 1</Link>
+              <Link to="/profile">Profile</Link>
+              <Link to="/dog/1">Overview</Link>
 
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/dog/:id" component={PetOverview} />
+              <Route path="/" exact={true} component={Home} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/dog/:id" component={PetOverview} />
+            </div>
+          </BrowserRouter>
+          <BottomMenu />
         </div>
-      </BrowserRouter>
-      <BottomMenu />
+      </div>
     </ThemeProvider>
   );
 }
