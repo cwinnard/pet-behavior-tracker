@@ -4,7 +4,7 @@
         "name": "Hank",
         "rescue": "Mountain Pet Rescue",
         "picture": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
-        "birthdate": "11/23/2019",
+        "age": "2",
         "observations": [
             {
                 "timestamp": "10/22",
@@ -33,7 +33,7 @@
         "name": "Skeeter",
         "rescue": "Mountain Pet Rescue",
         "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/funny-dog-captions-1563456605.jpg",
-        "birthdate": "01/01/2016",
+        "age": "6",
         "observations": [
             {
                 "timestamp": "10/22",
