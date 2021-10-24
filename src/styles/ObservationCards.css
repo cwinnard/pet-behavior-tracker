@@ -3,7 +3,6 @@
 }
 
 .observation-card {
-    width: 100%;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -15,6 +14,6 @@
 }
 
 .pet-avatar {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
 }

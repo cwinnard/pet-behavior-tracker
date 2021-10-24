@@ -7,22 +7,22 @@
         "birthdate": "11/23/2019",
         "observations": [
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/22",
                 "category": "Behavior",
                 "observation": "Happy"
             },
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/21",
                 "category": "Behavior",
                 "observation": "Happy"
             },
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/20",
                 "category": "Behavior",
                 "observation": "Spastic"
             },
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/19",
                 "category": "Behavior",
                 "observation": "Timid"
             }
@@ -36,22 +36,22 @@
         "birthdate": "01/01/2016",
         "observations": [
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/22",
                 "category": "Behavior",
                 "observation": "Aggressive"
             },
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/22",
                 "category": "Behavior",
                 "observation": "Timid"
             },
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/22",
                 "category": "Behavior",
                 "observation": "Happy"
             },
             {
-                "timestamp": 1634586092,
+                "timestamp": "10/22",
                 "category": "Behavior",
                 "observation": "Timid"
             }
