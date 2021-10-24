@@ -1,6 +1,3 @@
-import { Card, CardActionArea } from '@mui/material';
-import { Link } from 'react-router-dom';
-
 import ObservationCard from '../components/ObservationCard';
 
 import user from '../data/user.json';
@@ -19,7 +16,7 @@ const Home = () => {
                   <ObservationCard
                     id={observation.id}
                     picture={observation.picture}
-                    name={observation.name}
+                    name={observation.observation}
                   />
               )
           })}
