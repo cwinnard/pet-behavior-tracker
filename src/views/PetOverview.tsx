@@ -18,7 +18,9 @@ const PetOverview = () => {
          <Chip label="Energetic" /> 
          <Chip label="Timid" /> 
       </div>
-      
+      <div className="recent-observations-container">
+        
+      </div>
     </div>
   );
 }
