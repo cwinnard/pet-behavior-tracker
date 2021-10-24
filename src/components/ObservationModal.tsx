@@ -1,5 +1,6 @@
-import { Card, Modal } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Paper, Modal } from '@mui/material';
+
+import '../styles/ObservationModal.css';
 
 const ObservationModal = ({ open, handleClose }) => {
     return (
@@ -7,7 +8,9 @@ const ObservationModal = ({ open, handleClose }) => {
           open={open}
           onClose={handleClose}
         >
-            <p>Hello modal</p>
+            <Paper className="input-container">
+                <p>Hello modal</p>
+            </Paper>
         </Modal>
     );
   }

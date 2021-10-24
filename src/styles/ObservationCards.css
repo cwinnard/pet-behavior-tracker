@@ -1,5 +1,9 @@
+.observations-container {
+    max-width: 768px;
+}
+
 .observation-card {
-    width: 400px;
+    width: 100%;
     margin: 10px;
     display: flex;
     flex-direction: column;

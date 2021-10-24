@@ -3,7 +3,7 @@ import { Chip } from '@mui/material';
 
 import '../styles/PetOverview.css';
 import dogs from '../data/dogs.json';
-import ObservationCard from '../components/ObservationCard';
+import ObservationCards from '../components/ObservationCards';
 
 
 const PetOverview = () => {
@@ -22,15 +22,7 @@ const PetOverview = () => {
       </div>
       <div className="recent-observations-container">
         <div>Recent Observations</div>
-        {dog.observations.map(observation => {
-          return (
-            <ObservationCard
-              id={dog.id}
-              picture={dog.picture}
-              name={observation.observation}
-            />
-          )
-        })}
+        <ObservationCards observations={dog.observations}/>
       </div>
     </div>
   );

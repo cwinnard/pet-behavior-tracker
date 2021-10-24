@@ -1,4 +1,4 @@
-import ObservationCard from '../components/ObservationCard';
+import ObservationCards from '../components/ObservationCards';
 
 import user from '../data/user.json';
 import sortedObservations from '../data/sortedObservations.json';
@@ -10,17 +10,7 @@ const Home = () => {
         <div>
           Hello {user.name}
         </div>
-        <div className="observations-container">
-          {sortedObservations.map((observation) => {
-              return (
-                  <ObservationCard
-                    id={observation.id}
-                    picture={observation.picture}
-                    name={observation.observation}
-                  />
-              )
-          })}
-        </div>
+        <ObservationCards observations={sortedObservations}/>
       </div>
     );
   }
