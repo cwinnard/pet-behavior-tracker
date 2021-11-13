@@ -14,3 +14,7 @@ export const getDogOverview = (id) => {
     const dog = dogs.find(dog => dog.id === id);
     return Promise.resolve(dog || defaultDog);
 }
+
+export const makeObservation = ({ dogId, category, observation }) => {
+  Promise.resolve();
+}
