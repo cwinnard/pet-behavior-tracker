@@ -1,0 +1,13 @@
+.observation-drawer {
+    width: 500px;
+}
+
+.drawer-top {
+    height: 40px;
+    background-color: #390099;
+}
+
+.input-container {
+    margin: 0 auto;
+    height: 70vh;
+}
