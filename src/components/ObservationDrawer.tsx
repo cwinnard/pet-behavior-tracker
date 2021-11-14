@@ -8,9 +8,9 @@ import '../styles/ObservationDrawer.css';
 
 
 const ObservationDrawer = ({ open, handleClose }) => {
-    const [dogId, setDogId] = useState(0);
-    const [behavior, setBehavior] = useState('');
-    const [category, setCategory] = useState('');
+    const [dogId, setDogId] = useState(1);
+    const [behavior, setBehavior] = useState('test');
+    const [category, setCategory] = useState('test');
 
     const handleSubmit = () => {
         mutate(newObservationMutation, {
