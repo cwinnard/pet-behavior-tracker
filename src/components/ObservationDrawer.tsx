@@ -14,14 +14,14 @@ const categories = {
 
 
 const ObservationDrawer = ({ open, handleClose }) => {
-    const [dogId, setDogId] = useState(1);
+    const [dogId, setDogId] = useState('');
     const [category, setCategory] = useState('');
     const [behavior, setBehavior] = useState('');
     const [observationOptions, setObservationOptions] = useState([]);
 
     const handleSubmit = () => {
         mutate(newObservationMutation, {
-            dog_id: dogId,
+            dog_id: parseInt(dogId),
             behavior,
             category
         }).then((response: any) => {
@@ -31,7 +31,7 @@ const ObservationDrawer = ({ open, handleClose }) => {
 
     const handleCategoryChange = (value) => {
         setCategory(value);
-        setObservationOptions(categories[value])
+        setObservationOptions(categories[value]);
     }
 
     return (
@@ -44,8 +44,15 @@ const ObservationDrawer = ({ open, handleClose }) => {
             <div className="drawer-top" />
             <Paper className="input-container">
                 <p>Hello modal</p>
-                {/* <TextField onChange={event => setDogId(event?.target.value)}>
-                </TextField> */}
+                <TextField
+                  select
+                  value={dogId}
+                  onChange={event => setDogId(event?.target.value)}
+                >
+                    <MenuItem value={1}>
+                        {1}
+                    </MenuItem>
+                </TextField>
                 <TextField
                   select
                   value={category}
