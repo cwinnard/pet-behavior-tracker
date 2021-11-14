@@ -67,8 +67,8 @@ const ObservationDrawer = ({ open, handleClose }) => {
                 {category && (
                     <div className="options-container">
                         {observationOptions.map(option => (
-                            <div>
-                                hello {option}
+                            <div onClick={() => setBehavior(option)}>
+                                {option}
                             </div>
                         ))}
                     </div>
