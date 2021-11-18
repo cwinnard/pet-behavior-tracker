@@ -1,6 +1,6 @@
-const initialState = {}
+import defaultState from './defaultState';
 
-const appReducer = (state = initialState, action) => {
+const appReducer = (state = defaultState, action) => {
     switch (action.type) {
       default:
         return state
