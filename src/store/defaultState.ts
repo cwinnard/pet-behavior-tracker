@@ -1,6 +1,8 @@
 export default {
     user: {
-        name: 'Charlie'
+        id: null,
+        name: 'Charlie',
     },
-    dogs: []
+    dogs: [],
+    recentObservations: []
 }
