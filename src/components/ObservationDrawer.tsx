@@ -3,21 +3,20 @@ import { useState } from 'react';
 
 import { mutate } from '../api/clients/HasuraClient';
 import newObservationMutation from '../api/graphql/newObservationMutation';
+import categoryOptions from './categoryOptions';
+import ObservationOptionCard from './ObservationOptionCard';
 
 import '../styles/ObservationDrawer.css';
-
-// TODO own file
-const categories = {
-    'Behavior': ['Happy', 'Spastic'],
-    'Appetite': ['Low', 'Healthy', 'Insatiable']
-};
 
 
 const ObservationDrawer = ({ open, handleClose }) => {
     const [dogId, setDogId] = useState('');
     const [category, setCategory] = useState('');
     const [behavior, setBehavior] = useState('');
-    const [observationOptions, setObservationOptions] = useState([]);
+    const [observationOptions, setObservationOptions] = useState([{
+        name: '',
+        image: ''
+    }]);
 
     const handleSubmit = () => {
         mutate(newObservationMutation, {
@@ -31,7 +30,7 @@ const ObservationDrawer = ({ open, handleClose }) => {
 
     const handleCategoryChange = (value) => {
         setCategory(value);
-        setObservationOptions(categories[value]);
+        setObservationOptions(categoryOptions[value]);
     }
 
     return (
@@ -58,7 +57,7 @@ const ObservationDrawer = ({ open, handleClose }) => {
                   value={category}
                   onChange={event => handleCategoryChange(event.target.value)}
                 >
-                    {Object.keys(categories).map(category => (
+                    {Object.keys(categoryOptions).map(category => (
                         <MenuItem value={category}>
                             {category}
                         </MenuItem>
@@ -67,9 +66,11 @@ const ObservationDrawer = ({ open, handleClose }) => {
                 {category && (
                     <div className="options-container">
                         {observationOptions.map(option => (
-                            <div onClick={() => setBehavior(option)}>
-                                {option}
-                            </div>
+                            <ObservationOptionCard
+                              name={option.name}
+                              image={option.image}
+                              onClick={() => setBehavior(option.name)}
+                            />
                         ))}
                     </div>
                 )}
