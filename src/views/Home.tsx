@@ -20,7 +20,7 @@ const Home = () => {
     // useEffect(() => {
     //   getHomeData().then(user => setUser(user))
     // })
-    const user = useSelector((state: any) => state.user)
+    const user = useSelector((state: any) => state.user);
 
     return (
       <div>

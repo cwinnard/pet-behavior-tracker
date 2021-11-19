@@ -1,0 +1,10 @@
+.observation-options-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    width: 40%;
+    margin: 10px;
+}

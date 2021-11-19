@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { mutate } from '../api/clients/HasuraClient';
 import newObservationMutation from '../api/graphql/newObservationMutation';
 import categoryOptions from './categoryOptions';
-import ObservationOptionCard from './ObservationOptionCard';
+import ObservationOptionCards from './ObservationOptionCards';
 
 import '../styles/ObservationDrawer.css';
 
@@ -64,18 +64,10 @@ const ObservationDrawer = ({ open, handleClose }) => {
                     ))}
                 </TextField>
                 {category && (
-                    <div className="options-container">
-                        {observationOptions.map(option => (
-                            <ObservationOptionCard
-                              name={option.name}
-                              image={option.image}
-                              onClick={() => setBehavior(option.name)}
-                            />
-                        ))}
-                    </div>
+                    <ObservationOptionCards options={observationOptions} />
                 )}
                 <button onClick={() => handleSubmit()}>
-                    Submit
+                    Save
                 </button>
             </Paper>
         </Drawer>
